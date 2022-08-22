@@ -46,7 +46,7 @@ primary:
   linux_path: null
   mac_path: null
   shotgun_storage_id: 211
-  windows_path: \\nfa-vfxim-source.ahk.nl\4ejaar_source\projects
+  windows_path: \\nfa-vfxim-source.stud.ahk.nl\4ejaar_source\projects
 
 # ------------------------------------------------------------------------------
 # Below is an example of a second storage root. This root would require a local
