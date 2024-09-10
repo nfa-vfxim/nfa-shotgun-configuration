@@ -45,7 +45,7 @@ primary:
   default: true
   linux_path: null
   mac_path: null
-  shotgun_storage_id: 277
+  shotgun_storage_id: 345
   windows_path: \\nfa-vfxim-storage.stud.ahk.nl\2ejaar\projects
 render:
   default: false
