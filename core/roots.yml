@@ -46,13 +46,13 @@ primary:
   linux_path: null
   mac_path: null
   shotgun_storage_id: 277
-  windows_path: \\nfa-vfxim-source.stud.ahk.nl\2ejaar_source\projects
+  windows_path: \\nfa-vfxim-storage.stud.ahk.nl\2ejaar\projects
 render:
   default: false
   linux_path: null
   mac_path: null
   shotgun_storage_id: 345
-  windows_path: \\nfa-vfxim-render.stud.ahk.nl\2ejaar_render\projects
+  windows_path: \\nfa-vfxim-storage.stud.ahk.nl\2ejaar\projects
 
 # ------------------------------------------------------------------------------
 # Below is an example of a second storage root. This root would require a local
