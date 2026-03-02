@@ -22,7 +22,7 @@ engines.tk-3dsmaxplus.location:
 engines.tk-3dsmax.location:
   type: github_release
   organization: nfa-vfxim
-  name: tk-3dsmax
+  repository: tk-3dsmax
   version: v0.0.1
 
 # After Effects
@@ -126,3 +126,4 @@ engines.tk-unreal.location:
   type: github_release
   organization: ue4plugins
   repository: tk-unreal
+
