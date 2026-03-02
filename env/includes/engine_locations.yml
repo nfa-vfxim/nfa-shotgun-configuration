@@ -20,9 +20,10 @@ engines.tk-3dsmaxplus.location:
   version: v0.6.2
 
 engines.tk-3dsmax.location:
-  type: app_store
+  type: github_release
+  organization: nfa-vfxim
   name: tk-3dsmax
-  version: v1.1.6
+  version: v0.0.1
 
 # After Effects
 engines.tk-aftereffects.location:
