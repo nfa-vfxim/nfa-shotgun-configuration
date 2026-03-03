@@ -23,6 +23,7 @@
 includes:
   - ./templates/common.yml
   - ./templates/tk-aftereffects.yml
+  - ./templates/tk-3dsmax.yml
   - ./templates/tk-desktop-deliveries.yml
   - ./templates/tk-hiero.yml
   - ./templates/tk-houdini.yml
