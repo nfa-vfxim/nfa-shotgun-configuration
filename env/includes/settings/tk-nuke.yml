@@ -75,6 +75,8 @@ settings.tk-nuke.hiero.project:
   - app_instance: tk-multi-workfiles2
     name: "File Open..."
   location: "@engines.tk-nuke.location"
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 ################################################################################
 # Nuke
@@ -92,6 +94,8 @@ settings.tk-nuke.asset:
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-nuke.location"
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 # asset_step
 settings.tk-nuke.asset_step:
@@ -117,6 +121,8 @@ settings.tk-nuke.asset_step:
   - {app_instance: tk-multi-workfiles2, name: File Save...}
   - {app_instance: tk-multi-publish2, name: Publish...}
   location: "@engines.tk-nuke.location"
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 # project
 settings.tk-nuke.project:
@@ -135,6 +141,8 @@ settings.tk-nuke.project:
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-nuke.location"
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 # sequence
 settings.tk-nuke.sequence:
@@ -149,6 +157,8 @@ settings.tk-nuke.sequence:
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-nuke.location"
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 # shot
 settings.tk-nuke.shot:
@@ -163,6 +173,8 @@ settings.tk-nuke.shot:
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open... }
   location: "@engines.tk-nuke.location"
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 # shot_step
 settings.tk-nuke.shot_step:
@@ -190,6 +202,8 @@ settings.tk-nuke.shot_step:
   - {app_instance: tk-multi-workfiles2, name: File Save...}
   - {app_instance: tk-multi-publish2, name: Publish...}
   location: "@engines.tk-nuke.location"
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 ################################################################################
 # NukeStudio
@@ -233,6 +247,8 @@ settings.tk-nuke.nukestudio.asset_step:
   - app_instance: tk-multi-workfiles2
     name: "File Open..."
   location: '@engines.tk-nuke.location'
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 # project
 settings.tk-nuke.nukestudio.project:
@@ -281,6 +297,8 @@ settings.tk-nuke.nukestudio.project:
   - app_instance: tk-multi-workfiles2
     name: File Open...
   location: '@engines.tk-nuke.location'
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
 
 # shot_step
 settings.tk-nuke.nukestudio.shot_step:
@@ -321,3 +339,5 @@ settings.tk-nuke.nukestudio.shot_step:
   - app_instance: tk-multi-workfiles2
     name: "File Open..."
   location: '@engines.tk-nuke.location'
+  # Nuke 17.1 is not yet in tk-nuke's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 18
