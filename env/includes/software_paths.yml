@@ -15,9 +15,9 @@
 ################################################################################
 
 # Mari
-path.linux.mari: "Mari4.6"
-path.mac.mari: "/Applications/Mari4.6v4/Mari4.6v4.app"
-path.windows.mari: C:\Program Files\Mari4.6v4\Bundle\bin\Mari4.6v4.exe
+path.linux.mari: "Mari7.0v2"
+path.mac.mari: "/Applications/Mari7.0v2/Mari7.0v24.app"
+path.windows.mari: "C:/Program Files/Mari7.0v2/Bundle/bin/Mari7.0v2.exe"
 
 # Motionbuilder
 path.windows.motionbuilder: C:\Program Files\Autodesk\MotionBuilder 2022\bin\x64\motionbuilder.exe
@@ -25,9 +25,14 @@ path.windows.motionbuilder: C:\Program Files\Autodesk\MotionBuilder 2022\bin\x64
 # Hiero
 path.linux.hiero: "Nuke13.2"
 path.mac.hiero: "/Applications/Nuke13.2v3/Hiero13.2v3.app"
-path.windows.hiero: C:/Program Files/Nuke13.2v3/Nuke13.2.exe
+path.windows.hiero: C:/Program Files/Nuke17.1v1/Nuke17.1.exe
 
 # RV
 path.linux.rv: "rv"
 path.mac.rv: "/Applications/RV.app"
 path.windows.rv: C:\Program Files\ShotGrid\RV-2021.1.0\bin\rv.exe
+
+#Substance Painter
+path.linux.substance_painter: "Adobe Substance 3D Painter"
+path.mac.substance_painter: "/Applications/Adobe Substance 3D Painter.app"
+path.windows.substance_painter: C:\Program Files\Adobe\Adobe Substance 3D Painter\Adobe Substance 3D Painter.exe

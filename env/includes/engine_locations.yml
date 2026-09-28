@@ -20,9 +20,10 @@ engines.tk-3dsmaxplus.location:
   version: v0.6.2
 
 engines.tk-3dsmax.location:
-  type: app_store
-  name: tk-3dsmax
-  version: v1.1.6
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-3dsmax
+  version: v0.0.1
 
 # After Effects
 engines.tk-aftereffects.location:
@@ -59,20 +60,21 @@ engines.tk-houdini.location:
   type: github_release
   organization: nfa-vfxim
   repository: tk-houdini
-  version: 1.8.1.10
+  version: 1.9.1
 
 # Mari
 engines.tk-mari.location:
-  type: app_store
-  name: tk-mari
-  version: v1.3.3
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-mari
+  version: v1.4.1
 
 # Maya
 engines.tk-maya.location:
   type: github_release
   organization: nfa-vfxim
   repository: tk-maya
-  version: 0.11.1.6
+  version: 0.12.1.4
 
 # Motion Builder
 engines.tk-motionbuilder.location:
@@ -85,7 +87,7 @@ engines.tk-nuke.location:
   type: github_release
   organization: nfa-vfxim
   repository: tk-nuke
-  version: 0.14.1.7
+  version: 0.14.6.2
 
 # Photoshop
 engines.tk-photoshopcc.location:
@@ -110,3 +112,24 @@ engines.tk-vred.location:
   type: app_store
   name: tk-vred
   version: v2.1.4
+
+#Substance Painter
+engines.tk-substancepainter.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-substancepainter
+  version: 1.0.4
+
+# Unreal
+engines.tk-unreal.location:
+  version: v1.2.0
+  type: github_release
+  organization: ue4plugins
+  repository: tk-unreal
+
+# 3DEqualizer 4 R8 - tools load from C:/pipeline/3de (see tk-3de4 README)
+engines.tk-3de4.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-3de4
+  version: v1.0.0

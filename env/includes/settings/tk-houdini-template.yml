@@ -45,6 +45,9 @@ settings.tk-houdini-template.shot_step:
     - "Effects"
     - "Layout"
     - "Lighting"
+    - "Clothing FX"
+    - "Creature FX"
+
   templates_directory: houdini_template_directory
   file_extension: ".hipnc"
   location: "@apps.tk-houdini-template.location"
