@@ -15,7 +15,6 @@ description: Apps and Engines when launching with a project only context.
 
 includes:
 - ./includes/frameworks.yml
-- ./includes/settings/tk-3de4.yml
 - ./includes/settings/tk-3dsmaxplus.yml
 - ./includes/settings/tk-3dsmax.yml
 - ./includes/settings/tk-desktop.yml
@@ -31,14 +30,11 @@ includes:
 - ./includes/settings/tk-vred.yml
 - ./includes/settings/tk-shell.yml
 - ./includes/settings/tk-shotgun.yml
-- ./includes/settings/tk-substancepainter.yml
-- ./includes/settings/tk-unreal.yml
 
 ################################################################################
 # configuration for all engines to load in a project context
 
 engines:
-  tk-3de4: "@settings.tk-3de4.project"
   tk-3dsmaxplus: "@settings.tk-3dsmaxplus.project"
   tk-3dsmax: "@settings.tk-3dsmax.project"
   tk-desktop: "@settings.tk-desktop.project"
@@ -56,8 +52,6 @@ engines:
   tk-vred: "@settings.tk-vred.project"
   tk-shell: "@settings.tk-shell.project"
   tk-shotgun: "@settings.tk-shotgun.project"
-  tk-substancepainter: "@settings.tk-substancepainter.project"
-  tk-unreal: "@settings.tk-unreal.project"
 
 
 ################################################################################

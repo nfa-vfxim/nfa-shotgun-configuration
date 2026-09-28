@@ -56,28 +56,8 @@ settings.tk-multi-shotgunpanel.3dsmaxplus: &settings_tk-multi-shotgunpanel_3dsma
 
 # 3dsmax
 settings.tk-multi-shotgunpanel.3dsmax:
+  <<: *settings_tk-multi-shotgunpanel_3dsmaxplus
   actions_hook: "{engine}/tk-multi-shotgunpanel/basic/scene_actions.py"
-  action_mappings:
-    PublishedFile:
-    - actions: [import]
-      filters: {published_file_type: Alembic Cache}
-    - actions: [texture_node]
-      filters: {published_file_type: Image}
-    - actions: [reference, import]
-      filters: {published_file_type: 3dsmax Scene}
-    - actions: [texture_node]
-      filters: {published_file_type: Rendered Image}
-    - actions: [texture_node]
-      filters: {published_file_type: Texture}
-    - actions: [publish_clipboard]
-      filters: {}
-    Task:
-    - actions: [assign_task, task_to_ip]
-      filters: {}
-    Version:
-    - actions: [quicktime_clipboard, sequence_clipboard, add_to_playlist]
-      filters: {}
-  location: "@apps.tk-multi-shotgunpanel.location"
 
 # houdini
 settings.tk-multi-shotgunpanel.houdini:
@@ -85,8 +65,6 @@ settings.tk-multi-shotgunpanel.houdini:
     PublishedFile:
     - actions: [import]
       filters: {published_file_type: Alembic Cache}
-    - actions: [import]
-      filters: {published_file_type: FBX Cache}
     - actions: [merge]
       filters: {published_file_type: Houdini Scene}
     - actions: [file_cop]
@@ -343,29 +321,4 @@ settings.tk-multi-shotgunpanel.vred:
     - actions: [quicktime_clipboard, sequence_clipboard, add_to_playlist]
       filters: {}
   actions_hook: "{engine}/tk-multi-shotgunpanel/basic/scene_actions.py"
-  location: "@apps.tk-multi-shotgunpanel.location"
-
-# substancepainter
-settings.tk-multi-shotgunpanel.substancepainter:
-  action_mappings:
-    PublishedFile:
-    - actions: [publish_clipboard]
-      filters: {}
-    Task:
-    - actions: [assign_task, task_to_ip]
-      filters: {}
-    Version:
-    - actions: [quicktime_clipboard, sequence_clipboard, add_to_playlist]
-      filters: {}
-  location: "@apps.tk-multi-shotgunpanel.location"
-
-# Unreal
-settings.tk-multi-shotgunpanel.unreal:
-  actions_hook: '{self}/general_actions.py:{engine}/tk-multi-shotgunpanel/tk-unreal_actions.py'
-  action_mappings:
-    PublishedFile:
-    - actions: [publish_clipboard]
-      filters: {}
-  # Disable context switching since we only have a Project context.
-  enable_context_switch: false
   location: "@apps.tk-multi-shotgunpanel.location"

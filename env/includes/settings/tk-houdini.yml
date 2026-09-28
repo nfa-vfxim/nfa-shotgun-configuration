@@ -15,38 +15,28 @@ includes:
   - ../app_locations.yml
   - ../engine_locations.yml
   - ./tk-houdini-alembicnode.yml
-  - ./tk-houdini-fbxnode.yml
   - ./tk-houdini-cachenode.yml
   - ./tk-houdini-mantranode.yml
+  - ./tk-houdini-flipbook.yml
   - ./tk-houdini-arnold.yml
   - ./tk-houdini-renderman.yml
-  - ./tk-houdini-karma.yml
   - ./tk-houdini-usdrop.yml
   - ./tk-houdini-template.yml
-  - ./tk-multi-reviewsubmission2.yml
   - ./tk-multi-deadlinereviewsubmission.yml
   - ./tk-multi-loader2.yml
   - ./tk-multi-publish2.yml
   - ./tk-multi-screeningroom.yml
   - ./tk-multi-shotgunpanel.yml
   - ./tk-multi-snapshot.yml
-  - ./tk-multi-startup.yml
   - ./tk-multi-workfiles2.yml
 
 ################################################################################
 
-settings: &settings
-  review_field: aov_name
-  review_field_matches:
-    - main
-    - beauty
-    - master
-
 # asset
 settings.tk-houdini.asset:
-  <<: *settings
   apps:
-    tk-multi-startup: "@settings.tk-multi-startup.asset"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
@@ -58,9 +48,9 @@ settings.tk-houdini.asset:
 
 # asset_step
 settings.tk-houdini.asset_step:
-  <<: *settings
   apps:
-    tk-multi-startup: "@settings.tk-multi-startup.asset.houdini"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-breakdown:
@@ -72,28 +62,27 @@ settings.tk-houdini.asset_step:
     tk-multi-snapshot: "@settings.tk-multi-snapshot.houdini.asset_step"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.houdini.asset_step"
     tk-houdini-alembicnode: "@settings.tk-houdini-alembicnode.asset_step"
-    tk-houdini-fbxnode: "@settings.tk-houdini-fbxnode.asset_step"
     tk-houdini-cachenode: "@settings.tk-houdini-cachenode.asset_step"
     tk-houdini-mantranode: "@settings.tk-houdini-mantranode.asset_step"
+    tk-houdini-flipbook: "@settings.tk-houdini-flipbook.asset_step"
     tk-houdini-arnold: "@settings.tk-houdini-arnold.asset_step"
-    tk-houdini-karma: "@settings.tk-houdini-karma.asset_step"
     tk-houdini-renderman: "@settings.tk-houdini-renderman.asset_step"
     tk-houdini-usdrop: "@settings.tk-houdini-usdrop.asset_step"
     tk-houdini-template: "@settings.tk-houdini-template.asset_step"
-    tk-multi-reviewsubmission2: "@settings.tk-multi-reviewsubmission2.houdini.asset_step"
     tk-multi-deadlinereviewsubmission: "@settings.tk-multi-deadlinereviewsubmission.cg.asset"
   menu_favourites:
     - { app_instance: tk-multi-workfiles2, name: File Open... }
     - { app_instance: tk-multi-snapshot, name: Snapshot... }
     - { app_instance: tk-multi-workfiles2, name: File Save... }
     - { app_instance: tk-multi-publish2, name: Publish... }
+    - { app_instance: tk-houdini-flipbook, name: Flipbook... }
   location: "@engines.tk-houdini.location"
 
 # project
 settings.tk-houdini.project:
-  <<: *settings
   apps:
-    tk-multi-startup: "@settings.tk-multi-startup"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
@@ -105,9 +94,9 @@ settings.tk-houdini.project:
 
 # sequence
 settings.tk-houdini.sequence:
-  <<: *settings
   apps:
-    tk-multi-startup: "@settings.tk-multi-startup"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
@@ -119,9 +108,9 @@ settings.tk-houdini.sequence:
 
 # shot
 settings.tk-houdini.shot:
-  <<: *settings
   apps:
-    tk-multi-startup: "@settings.tk-multi-startup.shot"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
@@ -133,9 +122,9 @@ settings.tk-houdini.shot:
 
 # shot_step
 settings.tk-houdini.shot_step:
-  <<: *settings
   apps:
-    tk-multi-startup: "@settings.tk-multi-startup.shot.houdini"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
     tk-multi-about:
       location: "@apps.tk-multi-about.location"
     tk-multi-breakdown:
@@ -149,19 +138,18 @@ settings.tk-houdini.shot_step:
     tk-multi-snapshot: "@settings.tk-multi-snapshot.houdini.shot_step"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.houdini.shot_step"
     tk-houdini-alembicnode: "@settings.tk-houdini-alembicnode.shot_step"
-    tk-houdini-fbxnode: "@settings.tk-houdini-fbxnode.shot_step"
     tk-houdini-cachenode: "@settings.tk-houdini-cachenode.shot_step"
     tk-houdini-mantranode: "@settings.tk-houdini-mantranode.shot_step"
+    tk-houdini-flipbook: "@settings.tk-houdini-flipbook.shot_step"
     tk-houdini-arnold: "@settings.tk-houdini-arnold.shot_step"
-    tk-houdini-karma: "@settings.tk-houdini-karma.shot_step"
     tk-houdini-renderman: "@settings.tk-houdini-renderman.shot_step"
     tk-houdini-usdrop: "@settings.tk-houdini-usdrop.shot_step"
     tk-houdini-template: "@settings.tk-houdini-template.shot_step"
-    tk-multi-reviewsubmission2: "@settings.tk-multi-reviewsubmission2.houdini.shot_step"
     tk-multi-deadlinereviewsubmission: "@settings.tk-multi-deadlinereviewsubmission.cg.shot"
   menu_favourites:
     - { app_instance: tk-multi-workfiles2, name: File Open... }
     - { app_instance: tk-multi-snapshot, name: Snapshot... }
     - { app_instance: tk-multi-workfiles2, name: File Save... }
     - { app_instance: tk-multi-publish2, name: Publish... }
+    - { app_instance: tk-houdini-flipbook, name: Flipbook... }
   location: "@engines.tk-houdini.location"
