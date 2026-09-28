@@ -32,15 +32,11 @@ settings.tk-multi-snapshot.3dsmaxplus.shot_step: &settings_tk-multi-snapshot_3ds
 # ---- 3dsMax
 
 settings.tk-multi-snapshot.3dsmax.asset_step:
+  <<: *settings_tk-multi-snapshot_3dsmaxplus_asset_step
   hook_scene_operation: "{engine}/tk-multi-snapshot/basic/scene_operation.py"
-  template_snapshot: max_asset_snapshot
-  template_work: max_asset_work
-  location: "@apps.tk-multi-snapshot.location"
 settings.tk-multi-snapshot.3dsmax.shot_step:
+  <<: *settings_tk-multi-snapshot_3dsmaxplus_shot_step
   hook_scene_operation: "{engine}/tk-multi-snapshot/basic/scene_operation.py"
-  template_snapshot: max_shot_snapshot
-  template_work: max_shot_work
-  location: "@apps.tk-multi-snapshot.location"
 
 ################################################################################
 
@@ -169,17 +165,4 @@ settings.tk-multi-snapshot.vred.asset_step:
   template_snapshot: vred_asset_snapshot
   template_work: vred_asset_work
   hook_scene_operation: "{engine}/tk-multi-snapshot/basic/scene_operation.py"
-  location: "@apps.tk-multi-snapshot.location"
-
-
-################################################################################
-
-# ---- Substance Painter
-
-# asset step
-settings.tk-multi-snapshot.substancepainter.asset_step:
-  hook_scene_operation: "{engine}/tk-multi-snapshot/scene_operation_tk-substancepainter.py"
-  template_snapshot: substancepainter_asset_snapshot
-  template_work: substancepainter_asset_work
-  hook_thumbnail: "{engine}/thumbnail.py"
   location: "@apps.tk-multi-snapshot.location"

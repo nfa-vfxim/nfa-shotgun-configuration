@@ -146,64 +146,15 @@ settings.tk-multi-workfiles2.3dsmaxplus.shot_step:
 
 settings.tk-multi-workfiles2.3dsmax:
   <<: *settings_tk-multi-workfiles2
-  ui_config_hook: '{self}/ui_config.py:{engine}/tk-multi-workfiles2/basic/ui_config.py'
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
 
 settings.tk-multi-workfiles2.3dsmax.asset_step:
-  ui_config_hook: '{self}/ui_config.py:{engine}/tk-multi-workfiles2/basic/ui_config.py'
+  <<: *settings_tk-multi-workfiles2_3dsmaxplus_asset_step
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
-  template_publish: max_asset_publish
-  template_publish_area: asset_publish_area_max
-  template_work: max_asset_work
-  template_work_area: asset_work_area_max
-  entities:
-  - caption: Assets
-    entity_type: Asset
-    hierarchy: [sg_asset_type, code]
-    filters:
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  - caption: Shots
-    entity_type: Shot
-    filters:
-    hierarchy: [sg_sequence, code]
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  location: "@apps.tk-multi-workfiles2.location"
 
 settings.tk-multi-workfiles2.3dsmax.shot_step:
-  ui_config_hook: '{self}/ui_config.py:{engine}/tk-multi-workfiles2/basic/ui_config.py'
+  <<: *settings_tk-multi-workfiles2_3dsmaxplus_shot_step
   hook_scene_operation: "{engine}/tk-multi-workfiles2/basic/scene_operation.py"
-  template_publish: max_shot_publish
-  template_publish_area: shot_publish_area_max
-  template_work: max_shot_work
-  template_work_area: shot_work_area_max
-  entities:
-  - caption: Assets
-    entity_type: Asset
-    hierarchy: [sg_asset_type, code]
-    filters:
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  - caption: Shots
-    entity_type: Shot
-    filters:
-    hierarchy: [sg_sequence, code]
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  location: "@apps.tk-multi-workfiles2.location"
 
 ################################################################################
 
@@ -724,116 +675,4 @@ settings.tk-multi-workfiles2.substancepainter.project:
   template_work:
   template_work_area:
   version_compare_ignore_fields: []
-  location: "@apps.tk-multi-workfiles2.location"
-
-
-################################################################################
-
-# -- substancepainter
-
-settings.tk-multi-workfiles2.substancepainter.project:
-  allow_task_creation: true
-  create_new_task_hook: "{self}/create_new_task.py"
-  custom_actions_hook: "{self}/custom_actions.py"
-  entities:
-  - caption: Assets
-    entity_type: Task
-    filters:
-    - [entity, type_is, Asset]
-    hierarchy: [entity.Asset.sg_asset_type, entity, step, content]
-  - caption: Shots
-    entity_type: Task
-    filters:
-    - [entity, type_is, Shot]
-    hierarchy: [entity.Shot.sg_sequence, entity, step, content]
-  file_extensions: []
-  hook_copy_file: "{self}/copy_file.py"
-  hook_filter_publishes: default
-  hook_filter_work_files: default
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/scene_operation_tk-substancepainter.py"
-  launch_at_startup: false
-  my_tasks_extra_display_fields: []
-  saveas_default_name: scene
-  saveas_prefer_version_up: false
-  show_my_tasks: true
-  template_publish:
-  template_publish_area:
-  template_work:
-  template_work_area:
-  version_compare_ignore_fields: []
-  location: "@apps.tk-multi-workfiles2.location"
-
-# # asset_step
-settings.tk-multi-workfiles2.substancepainter.asset_step:
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/scene_operation_tk-substancepainter.py"
-  template_publish: substancepainter_asset_publish
-  template_publish_area: asset_publish_area_substancepainter
-  template_work: substancepainter_asset_work
-  template_work_area: asset_work_area_substancepainter
-  location: "@apps.tk-multi-workfiles2.location"
-
-settings.tk-multi-workfiles2.mari:
-  show_change_context: true
-  show_file_open: false
-  show_file_save: false
-  my_tasks_filters:
-    - [entity, type_is, Asset]
-    - [task_assignees, is, '{context.user}']
-  entities:
-  - caption: Assets
-    entity_type: Asset
-    hierarchy: [sg_asset_type, code]
-    filters:
-    sub_hierarchy:
-      entity_type: Task
-      filters:
-      link_field: entity
-      hierarchy: [step]
-  location: "@apps.tk-multi-workfiles2.location"
-
-################################################################################
-
-# ---- 3DEqualizer (tk-3de4)
-
-# project
-settings.tk-multi-workfiles2.3de:
-  <<: *settings_tk-multi-workfiles2
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/scene_operation.py"
-  file_extensions: [3de]
-  my_tasks_filters:
-    - ["sg_status_list", "is_not", "omt"]
-    - ["sg_status_list", "is_not", "apr"]
-    - ['task_assignees', 'is', '{context.user}']
-
-# shot_step
-settings.tk-multi-workfiles2.3de.shot_step:
-  template_publish: tde4_shot_publish
-  template_publish_area: shot_publish_area_3de
-  template_work: tde4_shot_work
-  template_work_area: shot_work_area_3de
-  hook_scene_operation: "{engine}/tk-multi-workfiles2/scene_operation.py"
-  file_extensions: [3de]
-  my_tasks_filters:
-    - ["sg_status_list", "is_not", "omt"]
-    - ["sg_status_list", "is_not", "apr"]
-    - ['task_assignees', 'is', '{context.user}']
-  entities:
-    - caption: Assets
-      entity_type: Asset
-      hierarchy: [sg_asset_type, code]
-      filters:
-      sub_hierarchy:
-        entity_type: Task
-        filters:
-        link_field: entity
-        hierarchy: [step]
-    - caption: Shots
-      entity_type: Shot
-      filters:
-      hierarchy: [sg_sequence, code]
-      sub_hierarchy:
-        entity_type: Task
-        filters:
-        link_field: entity
-        hierarchy: [step]
   location: "@apps.tk-multi-workfiles2.location"

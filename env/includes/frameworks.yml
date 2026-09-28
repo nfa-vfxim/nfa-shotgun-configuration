@@ -43,7 +43,7 @@ frameworks:
     location:
       type: app_store
       name: tk-framework-qtwidgets
-      version: v2.12.4
+      version: v2.10.5
   # shotgunutils v4 - Shotgun Related Utilities
   tk-framework-shotgunutils_v4.x.x:
     location:
@@ -56,7 +56,7 @@ frameworks:
     location:
       type: app_store
       name: tk-framework-shotgunutils
-      version: v5.10.1
+      version: v5.8.5
   # widget - QT Widget Framework for Tank Apps (qtwidgets fw predecessor)
   tk-framework-widget_v0.2.x:
     location:
@@ -68,7 +68,7 @@ frameworks:
     location:
       type: app_store
       name: tk-framework-widget
-      version: v1.2.1
+      version: v1.1.1
   # desktopclient - A client for Shotgun Create
   tk-framework-desktopclient_v0.x.x:
     location:
@@ -80,12 +80,3 @@ frameworks:
       type: app_store
       name: tk-framework-lmv
       version: v0.2.2
-
-  # unrealqt - PySide build for Unreal (Windows-only)
-  # Needed for unreal and substance painter
-  tk-framework-unrealqt_v1.x.x:
-    location:
-      version: v1.2.3
-      type: github_release
-      organization: ue4plugins
-      repository: tk-framework-unrealqt

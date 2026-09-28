@@ -16,11 +16,10 @@ includes:
 - ../engine_locations.yml
 - ./tk-multi-loader2.yml
 - ./tk-multi-publish2.yml
-- ./tk-multi-reviewsubmission2.yml
+- ./tk-multi-reviewsubmission.yml
 - ./tk-multi-screeningroom.yml
 - ./tk-multi-shotgunpanel.yml
 - ./tk-multi-snapshot.yml
-- ./tk-multi-startup.yml
 - ./tk-multi-workfiles2.yml
 
 ################################################################################
@@ -33,13 +32,12 @@ settings.tk-maya.asset:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.launch_at_startup"
-    tk-multi-startup: "@settings.tk-multi-startup.asset"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   debug_logging: false
   location: "@engines.tk-maya.location"
-  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
-  compatibility_dialog_min_version: 2027
 
 # asset_step
 settings.tk-maya.asset_step:
@@ -54,8 +52,9 @@ settings.tk-maya.asset_step:
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel.maya"
     tk-multi-snapshot: "@settings.tk-multi-snapshot.maya.asset_step"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.maya.asset_step"
-    tk-multi-reviewsubmission2: "@settings.tk-multi-reviewsubmission2.maya.asset_step"
-    tk-multi-startup: "@settings.tk-multi-startup.asset.maya"
+    tk-multi-reviewsubmission: "@settings.tk-multi-reviewsubmission.maya"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   - {app_instance: tk-multi-snapshot, name: Snapshot...}
@@ -63,8 +62,6 @@ settings.tk-maya.asset_step:
   - {app_instance: tk-multi-publish2, name: Publish...}
   template_project: asset_work_area_maya
   location: "@engines.tk-maya.location"
-  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
-  compatibility_dialog_min_version: 2027
 
 # project
 settings.tk-maya.project:
@@ -74,12 +71,11 @@ settings.tk-maya.project:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.launch_at_startup"
-    tk-multi-startup: "@settings.tk-multi-startup"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-maya.location"
-  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
-  compatibility_dialog_min_version: 2027
 
 # sequence
 settings.tk-maya.sequence:
@@ -89,12 +85,11 @@ settings.tk-maya.sequence:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.launch_at_startup"
-    tk-multi-startup: "@settings.tk-multi-startup"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-maya.location"
-  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
-  compatibility_dialog_min_version: 2027
 
 # shot
 settings.tk-maya.shot:
@@ -104,12 +99,11 @@ settings.tk-maya.shot:
     tk-multi-screeningroom: "@settings.tk-multi-screeningroom.rv"
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.launch_at_startup"
-    tk-multi-startup: "@settings.tk-multi-startup.shot"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-maya.location"
-  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
-  compatibility_dialog_min_version: 2027
 
 # shot_step
 settings.tk-maya.shot_step:
@@ -126,8 +120,9 @@ settings.tk-maya.shot_step:
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel.maya"
     tk-multi-snapshot: "@settings.tk-multi-snapshot.maya.shot_step"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.maya.shot_step"
-    tk-multi-reviewsubmission2: "@settings.tk-multi-reviewsubmission2.maya.shot_step"
-    tk-multi-startup: "@settings.tk-multi-startup.shot.maya"
+    tk-multi-reviewsubmission: "@settings.tk-multi-reviewsubmission.maya"
+    tk-multi-startup:
+      location: "@apps.tk-multi-startup.location"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   - {app_instance: tk-multi-snapshot, name: Snapshot...}
@@ -135,5 +130,3 @@ settings.tk-maya.shot_step:
   - {app_instance: tk-multi-publish2, name: Publish...}
   template_project: shot_work_area_maya
   location: "@engines.tk-maya.location"
-  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
-  compatibility_dialog_min_version: 2027
