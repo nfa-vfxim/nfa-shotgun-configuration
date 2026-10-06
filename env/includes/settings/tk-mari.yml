@@ -31,6 +31,8 @@ settings.tk-mari.asset:
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.mari"
   location: "@engines.tk-mari.location"
+  # Mari 7 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 8
 
 # asset_step
 settings.tk-mari.asset_step:
@@ -46,6 +48,8 @@ settings.tk-mari.asset_step:
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.mari"
     tk-mari-projectmanager: "@settings.tk-mari-projectmanager"
   location: "@engines.tk-mari.location"
+  # Mari 7 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 8
 
 # project
 settings.tk-mari.project:
@@ -55,3 +59,5 @@ settings.tk-mari.project:
     tk-multi-shotgunpanel: "@settings.tk-multi-shotgunpanel"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.mari"
   location: "@engines.tk-mari.location"
+  # Mari 7 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 8

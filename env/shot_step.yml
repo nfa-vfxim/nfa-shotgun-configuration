@@ -15,6 +15,7 @@ description: Apps and Engines related to Shot based work.
 
 includes:
 - ./includes/frameworks.yml
+- ./includes/settings/tk-3de4.yml
 - ./includes/settings/tk-desktop2.yml
 - ./includes/settings/tk-3dsmaxplus.yml
 - ./includes/settings/tk-3dsmax.yml
@@ -31,6 +32,7 @@ includes:
 # configuration for all engines to load in a shot step context
 
 engines:
+  tk-3de4: "@settings.tk-3de4.shot_step"
   # referencing the DCC-specific shot_step environments included above
   tk-desktop2: "@settings.tk-desktop2.all"
   tk-3dsmaxplus: "@settings.tk-3dsmaxplus.shot_step"

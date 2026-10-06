@@ -38,6 +38,8 @@ settings.tk-maya.asset:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   debug_logging: false
   location: "@engines.tk-maya.location"
+  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 2027
 
 # asset_step
 settings.tk-maya.asset_step:
@@ -61,6 +63,8 @@ settings.tk-maya.asset_step:
   - {app_instance: tk-multi-publish2, name: Publish...}
   template_project: asset_work_area_maya
   location: "@engines.tk-maya.location"
+  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 2027
 
 # project
 settings.tk-maya.project:
@@ -74,6 +78,8 @@ settings.tk-maya.project:
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-maya.location"
+  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 2027
 
 # sequence
 settings.tk-maya.sequence:
@@ -87,6 +93,8 @@ settings.tk-maya.sequence:
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-maya.location"
+  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 2027
 
 # shot
 settings.tk-maya.shot:
@@ -100,6 +108,8 @@ settings.tk-maya.shot:
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   location: "@engines.tk-maya.location"
+  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 2027
 
 # shot_step
 settings.tk-maya.shot_step:
@@ -125,3 +135,5 @@ settings.tk-maya.shot_step:
   - {app_instance: tk-multi-publish2, name: Publish...}
   template_project: shot_work_area_maya
   location: "@engines.tk-maya.location"
+  # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
+  compatibility_dialog_min_version: 2027
