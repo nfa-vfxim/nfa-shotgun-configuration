@@ -27,7 +27,7 @@ settings.tk-nuke-writenode.asset:
             publish_template: nuke_asset_render_pub
             tile_color: 4292673791
             settings:
-              colorspace: ACES - ACES2065-1
+              colorspace: ACES2065-1
               datatype: 16 bit half
               channels: rgb
               compression: DWAA
@@ -74,7 +74,7 @@ settings.tk-nuke-writenode.asset:
           publish_template: nuke_asset_tiff_render_pub
           tile_color: 2095579135
           settings:
-            colorspace: Input - ADX - ADX10
+            colorspace: matte_paint
             datatype: 16 bit
             channels: rgb
             compression: Deflate
@@ -92,7 +92,7 @@ settings.tk-nuke-writenode.shot:
           publish_template: nuke_shot_render_pub
           tile_color: 4292673791
           settings:
-            colorspace: ACES - ACES2065-1
+            colorspace: ACES2065-1
             datatype: 16 bit half
             channels: rgb
             compression: DWAA
@@ -140,7 +140,7 @@ settings.tk-nuke-writenode.shot:
             publish_template: nuke_shot_tiff_render_pub
             tile_color: 2095579135
             settings:
-              colorspace: Input - ADX - ADX10
+              colorspace: matte_paint
               datatype: 16 bit
               channels: rgb
               compression: Deflate
