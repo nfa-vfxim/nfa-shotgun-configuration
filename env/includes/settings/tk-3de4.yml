@@ -1,0 +1,25 @@
+# tk-3de4 (3DEqualizer 4 R8+) - NFA
+
+includes:
+  - ../app_locations.yml
+  - ../engine_locations.yml
+  - ./tk-multi-workfiles2.yml
+
+settings.tk-3de4.project:
+  apps:
+    tk-multi-about:
+      location: "@apps.tk-multi-about.location"
+    tk-multi-workfiles2: "@settings.tk-multi-workfiles2.3de"
+  menu_favourites:
+    - { app_instance: tk-multi-workfiles2, name: File Open... }
+  location: "@engines.tk-3de4.location"
+
+settings.tk-3de4.shot_step:
+  apps:
+    tk-multi-about:
+      location: "@apps.tk-multi-about.location"
+    tk-multi-workfiles2: "@settings.tk-multi-workfiles2.3de.shot_step"
+  menu_favourites:
+    - { app_instance: tk-multi-workfiles2, name: File Open... }
+    - { app_instance: tk-multi-workfiles2, name: File Save... }
+  location: "@engines.tk-3de4.location"

@@ -15,6 +15,7 @@ description: Apps and Engines when launching with a project only context.
 
 includes:
 - ./includes/frameworks.yml
+- ./includes/settings/tk-3de4.yml
 - ./includes/settings/tk-3dsmaxplus.yml
 - ./includes/settings/tk-3dsmax.yml
 - ./includes/settings/tk-desktop.yml
@@ -37,6 +38,7 @@ includes:
 # configuration for all engines to load in a project context
 
 engines:
+  tk-3de4: "@settings.tk-3de4.project"
   tk-3dsmaxplus: "@settings.tk-3dsmaxplus.project"
   tk-3dsmax: "@settings.tk-3dsmax.project"
   tk-desktop: "@settings.tk-desktop.project"

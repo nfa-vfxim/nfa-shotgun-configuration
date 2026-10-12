@@ -790,3 +790,50 @@ settings.tk-multi-workfiles2.mari:
       link_field: entity
       hierarchy: [step]
   location: "@apps.tk-multi-workfiles2.location"
+
+################################################################################
+
+# ---- 3DEqualizer (tk-3de4)
+
+# project
+settings.tk-multi-workfiles2.3de:
+  <<: *settings_tk-multi-workfiles2
+  hook_scene_operation: "{engine}/tk-multi-workfiles2/scene_operation.py"
+  file_extensions: [3de]
+  my_tasks_filters:
+    - ["sg_status_list", "is_not", "omt"]
+    - ["sg_status_list", "is_not", "apr"]
+    - ['task_assignees', 'is', '{context.user}']
+
+# shot_step
+settings.tk-multi-workfiles2.3de.shot_step:
+  template_publish: tde4_shot_publish
+  template_publish_area: shot_publish_area_3de
+  template_work: tde4_shot_work
+  template_work_area: shot_work_area_3de
+  hook_scene_operation: "{engine}/tk-multi-workfiles2/scene_operation.py"
+  file_extensions: [3de]
+  my_tasks_filters:
+    - ["sg_status_list", "is_not", "omt"]
+    - ["sg_status_list", "is_not", "apr"]
+    - ['task_assignees', 'is', '{context.user}']
+  entities:
+    - caption: Assets
+      entity_type: Asset
+      hierarchy: [sg_asset_type, code]
+      filters:
+      sub_hierarchy:
+        entity_type: Task
+        filters:
+        link_field: entity
+        hierarchy: [step]
+    - caption: Shots
+      entity_type: Shot
+      filters:
+      hierarchy: [sg_sequence, code]
+      sub_hierarchy:
+        entity_type: Task
+        filters:
+        link_field: entity
+        hierarchy: [step]
+  location: "@apps.tk-multi-workfiles2.location"

@@ -24,6 +24,7 @@ includes:
   - ./templates/common.yml
   - ./templates/tk-aftereffects.yml
   - ./templates/tk-3dsmax.yml
+  - ./templates/tk-3de4.yml
   - ./templates/tk-desktop-deliveries.yml
   - ./templates/tk-hiero.yml
   - ./templates/tk-houdini.yml
