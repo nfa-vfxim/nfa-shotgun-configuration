@@ -97,6 +97,13 @@ apps.tk-multi-reviewsubmission2.location:
   repository: tk-multi-reviewsubmission2
   version: 1.0.1.3
 
+# NFA Shot Context (Maya)
+apps.tk-multi-shotcontext.location:
+  type: github_release
+  organization: nfa-vfxim
+  repository: tk-multi-shotcontext
+  version: 1.1.0
+
 # deadinereviewsubmission
 apps.tk-multi-deadlinereviewsubmission.location:
   type: github_release
