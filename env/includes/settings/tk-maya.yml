@@ -127,12 +127,15 @@ settings.tk-maya.shot_step:
     tk-multi-snapshot: "@settings.tk-multi-snapshot.maya.shot_step"
     tk-multi-workfiles2: "@settings.tk-multi-workfiles2.maya.shot_step"
     tk-multi-reviewsubmission2: "@settings.tk-multi-reviewsubmission2.maya.shot_step"
+    tk-multi-shotcontext:
+      location: "@apps.tk-multi-shotcontext.location"
     tk-multi-startup: "@settings.tk-multi-startup.shot.maya"
   menu_favourites:
   - {app_instance: tk-multi-workfiles2, name: File Open...}
   - {app_instance: tk-multi-snapshot, name: Snapshot...}
   - {app_instance: tk-multi-workfiles2, name: File Save...}
   - {app_instance: tk-multi-publish2, name: Publish...}
+  - {app_instance: tk-multi-shotcontext, name: Shot Context...}
   template_project: shot_work_area_maya
   location: "@engines.tk-maya.location"
   # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
