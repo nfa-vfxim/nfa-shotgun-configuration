@@ -136,6 +136,8 @@ settings.tk-maya.shot_step:
   - {app_instance: tk-multi-workfiles2, name: File Save...}
   - {app_instance: tk-multi-publish2, name: Publish...}
   - {app_instance: tk-multi-shotcontext, name: Shot Context...}
+  - {app_instance: tk-multi-startup, name: Shot Setup...}
+  - {app_instance: tk-multi-startup, name: Create Shot Camera + Plate}
   template_project: shot_work_area_maya
   location: "@engines.tk-maya.location"
   # Maya 2026 is not yet in the engine's tested range; don't show the warning dialog
