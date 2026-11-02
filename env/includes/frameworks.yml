@@ -37,7 +37,7 @@ frameworks:
     location:
       type: app_store
       name: tk-framework-desktopserver
-      version: v1.5.3
+      version: v1.8.9
   # qtwidgets - collection of Toolkit related QT Widgets
   tk-framework-qtwidgets_v2.x.x:
     location:
