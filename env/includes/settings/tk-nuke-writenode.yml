@@ -21,7 +21,7 @@ settings.tk-nuke-writenode.asset:
   categories:
     - category_name: main
       write_nodes:
-          - name: exr (dwaa 16bit)
+          - name: exr (zip 16bit)
             file_type: exr
             render_template: nuke_asset_render
             publish_template: nuke_asset_render_pub
@@ -35,16 +35,6 @@ settings.tk-nuke-writenode.asset:
     - category_name: prerender
       default_category: True
       write_nodes:
-        - name: exr (dwaa 16bit)
-          file_type: exr
-          render_template: nuke_asset_render
-          publish_template: nuke_asset_render_pub
-          tile_color: 2365546239
-          settings:
-            colorspace: scene_linear
-            datatype: 16 bit half
-            channels: rgba
-            compression: Zip (1 scanline)
         - name: exr (zip 16bit)
           file_type: exr
           render_template: nuke_asset_render
@@ -78,6 +68,8 @@ settings.tk-nuke-writenode.asset:
             datatype: 16 bit
             channels: rgb
             compression: Deflate
+  renamed_write_nodes:
+    "exr (dwaa 16bit)": "exr (zip 16bit)"
   location: "@apps.tk-nuke-writenode.location"
 
 # shot
@@ -86,7 +78,7 @@ settings.tk-nuke-writenode.shot:
   categories:
     - category_name: main
       write_nodes:
-        - name: exr (dwaa 16bit)
+        - name: exr (zip 16bit)
           file_type: exr
           render_template: nuke_shot_render
           publish_template: nuke_shot_render_pub
@@ -101,16 +93,6 @@ settings.tk-nuke-writenode.shot:
     - category_name: prerender
       default_category: True
       write_nodes:
-          - name: exr (dwaa 16bit)
-            file_type: exr
-            render_template: nuke_shot_render
-            publish_template: nuke_shot_render_pub
-            tile_color: 2365546239
-            settings:
-              colorspace: scene_linear
-              datatype: 16 bit half
-              channels: rgba
-              compression: Zip (1 scanline)
           - name: exr (zip 16bit)
             file_type: exr
             render_template: nuke_shot_render
@@ -145,4 +127,6 @@ settings.tk-nuke-writenode.shot:
               channels: rgb
               compression: Deflate
 
+  renamed_write_nodes:
+    "exr (dwaa 16bit)": "exr (zip 16bit)"
   location: "@apps.tk-nuke-writenode.location"
