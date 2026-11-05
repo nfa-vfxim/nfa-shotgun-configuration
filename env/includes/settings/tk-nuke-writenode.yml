@@ -30,7 +30,7 @@ settings.tk-nuke-writenode.asset:
               colorspace: ACES2065-1
               datatype: 16 bit half
               channels: rgb
-              compression: DWAA
+              compression: Zip (1 scanline)
 
     - category_name: prerender
       default_category: True
@@ -44,7 +44,7 @@ settings.tk-nuke-writenode.asset:
             colorspace: scene_linear
             datatype: 16 bit half
             channels: rgba
-            compression: DWAA
+            compression: Zip (1 scanline)
         - name: exr (zip 16bit)
           file_type: exr
           render_template: nuke_asset_render
@@ -95,7 +95,7 @@ settings.tk-nuke-writenode.shot:
             colorspace: ACES2065-1
             datatype: 16 bit half
             channels: rgb
-            compression: DWAA
+            compression: Zip (1 scanline)
           main_output: True
 
     - category_name: prerender
@@ -110,7 +110,7 @@ settings.tk-nuke-writenode.shot:
               colorspace: scene_linear
               datatype: 16 bit half
               channels: rgba
-              compression: DWAA
+              compression: Zip (1 scanline)
           - name: exr (zip 16bit)
             file_type: exr
             render_template: nuke_shot_render
