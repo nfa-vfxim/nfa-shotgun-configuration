@@ -914,12 +914,14 @@ OFXcom.absoft.NeatVideo6_v6 {
  xpos -4646
  ypos -9857
 }
-Write {
- create_directories true
- ocioColorspace scene_linear
- display "sRGB - Display"
- view "ACES 2.0 - SDR 100 nits (Rec.709)"
- name Write2
+ModifyMetaData {
+ metadata {
+  {set category prerender}
+  {set output denoise}
+  {set data_type "exr (zip 16bit)"}
+ }
+ name ShotGridWriteNodePlaceholder_denoise
+ label "wordt bij openen een\nShotGrid write (denoise)"
  xpos -4646
  ypos -9763
 }
