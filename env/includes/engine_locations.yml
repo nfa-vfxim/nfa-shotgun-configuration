@@ -98,13 +98,13 @@ engines.tk-photoshopcc.location:
 engines.tk-shell.location:
   type: app_store
   name: tk-shell
-  version: v0.9.2
+  version: v0.10.3
 
 # Shotgun
 engines.tk-shotgun.location:
   type: app_store
   name: tk-shotgun
-  version: v0.10.2
+  version: v0.11.4
 
 # VRED
 engines.tk-vred.location:

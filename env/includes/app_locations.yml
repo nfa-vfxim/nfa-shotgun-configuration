@@ -42,7 +42,7 @@ apps.tk-multi-startup.location:
 apps.tk-multi-about.location:
   type: app_store
   name: tk-multi-about
-  version: v0.4.2
+  version: v0.5.2
 
 # breakdown
 apps.tk-multi-breakdown.location:
@@ -61,7 +61,7 @@ apps.tk-multi-demo.location:
 apps.tk-multi-launchapp.location:
   type: app_store
   name: tk-multi-launchapp
-  version: v0.12.2
+  version: v0.14.2
 
 # loader2
 apps.tk-multi-loader2.location:
@@ -81,7 +81,7 @@ apps.tk-multi-publish2.location:
 apps.tk-multi-pythonconsole.location:
   type: app_store
   name: tk-multi-pythonconsole
-  version: v1.3.1
+  version: v1.4.3
 
 # reviewsubmission
 apps.tk-multi-reviewsubmission.location:
@@ -115,7 +115,7 @@ apps.tk-multi-deadlinereviewsubmission.location:
 apps.tk-multi-screeningroom.location:
   type: app_store
   name: tk-multi-screeningroom
-  version: v0.5.1
+  version: v0.6.3
 
 # setframerange
 apps.tk-multi-setframerange.location:
@@ -128,13 +128,13 @@ apps.tk-multi-setframerange.location:
 apps.tk-multi-shotgunpanel.location:
   type: app_store
   name: tk-multi-shotgunpanel
-  version: v1.8.3
+  version: v1.9.2
 
 # snapshot
 apps.tk-multi-snapshot.location:
   type: app_store
   name: tk-multi-snapshot
-  version: v0.9.1
+  version: v0.10.3
 
 # workfiles (required for Mari)
 apps.tk-multi-workfiles.location:
@@ -153,7 +153,7 @@ apps.tk-multi-workfiles2.location:
 apps.tk-multi-devutils.location:
   type: app_store
   name: tk-multi-devutils
-  version: v1.2.1
+  version: v1.3.3
 
 # ---- Shotgun apps
 
@@ -161,19 +161,19 @@ apps.tk-multi-devutils.location:
 apps.tk-shotgun-folders.location:
   type: app_store
   name: tk-shotgun-folders
-  version: v0.3.1
+  version: v0.4.1
 
 # shotgun launchfolder
 apps.tk-shotgun-launchfolder.location:
   type: app_store
   name: tk-shotgun-launchfolder
-  version: v0.3.1
+  version: v0.4.1
 
 # shotgun launchpublish
 apps.tk-shotgun-launchpublish.location:
   type: app_store
   name: tk-shotgun-launchpublish
-  version: v0.5.1
+  version: v0.7.2
 
 # ---- Hiero apps
 
@@ -188,7 +188,7 @@ apps.tk-hiero-export.location:
 apps.tk-hiero-openinshotgun.location:
   type: app_store
   name: tk-hiero-openinshotgun
-  version: v0.4.2
+  version: v0.5.0
 
 # ---- Houdini apps
 
