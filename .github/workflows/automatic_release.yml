@@ -6,8 +6,9 @@ on:
   workflow_dispatch:
 
 # Every release branch is main plus its own core/roots.yml (the storage of
-# that year). main itself has no roots.yml, so never merge a release branch
-# back into main: make changes on main and let this workflow release them.
+# that year). Make changes on main and let this workflow release them.
+# Never merge a release branch back into main. If that happens anyway, the
+# merge step below still keeps each release branch's own core/roots.yml.
 jobs:
   nfa-release-shotgrid-config:
     timeout-minutes: 2
@@ -29,6 +30,28 @@ jobs:
 
     - name: Release main to ${{ matrix.release }}
       run: |
+          set -e
           git checkout release/${{ matrix.release }}
-          git merge --no-ff origin/main -m "Automatic merge main for release ${{ matrix.release }}"
+
+          # Merge without committing, so we can fix core/roots.yml first.
+          git merge --no-ff --no-commit origin/main || true
+
+          # Always keep this release branch's own storage roots,
+          # whatever main has (changed, added or deleted) for this file.
+          git checkout HEAD -- core/roots.yml
+
+          # Any other conflict is a real one: stop and show it.
+          conflicts=$(git diff --name-only --diff-filter=U)
+          if [ -n "$conflicts" ]; then
+            echo "::error::Merge conflicts on release/${{ matrix.release }}:"
+            echo "$conflicts"
+            exit 1
+          fi
+
+          if git diff --cached --quiet && [ ! -f .git/MERGE_HEAD ]; then
+            echo "release/${{ matrix.release }} is already up to date."
+            exit 0
+          fi
+
+          git commit --no-edit -m "Automatic merge main for release ${{ matrix.release }}"
           git push origin release/${{ matrix.release }}
